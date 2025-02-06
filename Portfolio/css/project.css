@@ -1,0 +1,212 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
+    background: #a2a7bd;
+    /* background: #e0e2eb; */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* text-align: center; */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+button.go-home,
+.tech-button {
+    /* background: #ff7e5f; */
+    /* background: linear-gradient(to right, #ff7e5f, #feb47b); */
+    background: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease;
+    font-size: 15px;
+}
+
+button.go-home:hover,
+.tech-button:hover {
+    background: #feb47b;
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    max-width: 600px;
+    /* margin: 20px 0; */
+    animation: slideInLeft 1s ease;
+}
+
+.image-container img {
+    width: 100%;
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.project-info {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 1s ease;
+    /* margin: 20px 0; */
+}
+
+.project-info h2,
+.project-info h3 {
+    color: #ff7e5f;
+    margin: 10px 0;
+}
+
+.live-link {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.button-container {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+
+.live-link:hover {
+    background: #6a11cb;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.technologies {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tech-button {
+    margin: 5px;
+    background: #00c6ff;
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+/* other  */
+.top-heading {
+    font-size: 30px;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .project-info {
+        animation: fadeIn 1.5s ease;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
